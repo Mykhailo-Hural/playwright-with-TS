@@ -6,7 +6,7 @@ test('Basic Navigation', async ({ page }) => {
     await page.reload();
 });
 
-test.only('Interaction with the Web Element on Gitlab', async ({ page }) => {
+test('Interaction with the Web Element on Gitlab', async ({ page }) => {
     await page.goto('https://gitlab.com/');
     // Corrected line below
     await page.locator('.be-nav-navigation-bottom >> text="Get free trial"').click();
