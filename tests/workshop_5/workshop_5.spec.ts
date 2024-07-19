@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-test.only('Open new window and navigate back', async ({ context, page }) => {
+test('Open new window and navigate back', async ({ context, page }) => {
   await page.goto('file://' + __dirname + '/index.html');
   // Fix typo: "waiForEvent" should be "waitForEvent"
   const pagePromise = context.waitForEvent('page');
