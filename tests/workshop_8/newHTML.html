@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TypeScript Test Page</title>
+    <style>
+      /* Global Styles */
+      body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f0f4f8;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 600px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        box-sizing: border-box;
+      }
+
+      h1 {
+        color: #333;
+        text-align: center;
+      }
+
+      .form-section {
+        margin: 20px 0;
+      }
+
+      .form-section label {
+        font-weight: bold;
+        margin-bottom: 5px;
+        display: block;
+      }
+
+      .form-section input[type='text'],
+      .form-section input[type='number'] {
+        width: calc(100% - 20px);
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        box-sizing: border-box;
+        font-size: 16px;
+      }
+
+      .form-section input[type='checkbox'] {
+        margin-left: 5px;
+        transform: scale(1.2);
+      }
+
+      .button-section {
+        text-align: center;
+        margin: 20px 0;
+      }
+
+      .button-section button {
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+      }
+
+      .button-section button:hover {
+        background-color: #0056b3;
+      }
+
+      .display-section {
+        background-color: #f7f7f7;
+        padding: 15px;
+        border-radius: 5px;
+        border: 1px solid #ddd;
+        margin-top: 20px;
+      }
+
+      .display-section p {
+        margin: 10px 0;
+        font-size: 18px;
+        color: #555;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>TypeScript Concepts Test Page</h1>
+      <div class="form-section">
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" placeholder="Enter your first name" />
+        <label for="age">Age:</label>
+        <input type="number" id="age" placeholder="Enter your age" />
+        <label for="isStudent">Student:</label>
+        <input type="checkbox" id="isStudent" /> Yes
+      </div>
+      <div class="button-section">
+        <button id="applyData">Apply</button>
+      </div>
+      <div class="display-section">
+        <p><strong>First Name:</strong> <span id="displayFirstName"></span></p>
+        <p><strong>Age:</strong> <span id="displayAge"></span></p>
+        <p><strong>Student:</strong> <span id="displayIsStudent"></span></p>
+        <p id="loadedData"></p>
+      </div>
+    </div>
+    <script>
+      // Apply button click event handler
+      document.getElementById('applyData').addEventListener('click', () => {
+        // Read input values
+        const firstName = document.getElementById('firstName').value;
+        const age = document.getElementById('age').value;
+        const isStudent = document.getElementById('isStudent').checked;
+
+        // Update display elements
+        document.getElementById('displayFirstName').textContent = firstName || 'N/A';
+        document.getElementById('displayAge').textContent = age || 'N/A';
+        document.getElementById('displayIsStudent').textContent = isStudent ? 'Yes' : 'No';
+      });
+    </script>
+  </body>
+</html>
