@@ -28,6 +28,4 @@ test('Handling From', async ({ page }) => {
 
     const checkbox = await page.locator('.toggle');
     await checkbox.click();
-
-    await page.waitForTimeout(1000);
 });
